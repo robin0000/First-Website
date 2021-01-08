@@ -3,10 +3,11 @@
     padding: 0;
 }
 header{
-    background-color: #161616;
+    background-color: #1a1a1a;
     width: 100%;
     height: 100px;
-    position: fixed;  
+    position: fixed; 
+    z-index: 1; 
 }
 .innerHeader{
     display: flex;
@@ -15,19 +16,21 @@ header{
     padding: 0px 20%;
     align-items: center;
 }
-li, a, button, h1 {
+li, a, button, p, h1 {
     font-family: 'montserrat';
     text-decoration: none;
     color: white;
 }
 
-.logoContainer h1{
+.logoContainer .textLogo{
     cursor: pointer;
-    color: rgb(243, 229, 35);
+    color: #f2c740;
+    font-size: 40px;
+    font-weight: bold;
 }
 
-.logoContainer h1 span{
-    font-weight: 200;
+.logoContainer .textLogo span{
+    font-weight: 300;
     color: white;
 }
 
@@ -36,31 +39,19 @@ li, a, button, h1 {
     padding: 0 20px;
 }
 .navLinks a:hover{
-    color: rgb(243, 229, 35);
+    color: #f2c740;
 }
-.banner{
-    width: 100%;
-    height: 500px;
-    background-color: #888888;
+button {
+    width: 200px;
+    height: 40px;
+    background-color: #f2c740;
+    border: none;
+    border-radius: 50px;
 }
-.section1{
-    width: 100%;
-    height: 500px;
-    background-color: #ffffff;
-}
-.section2{
-    width: 100%;
-    height: 500px;
-    background-color: #d3d3d3;
-}
-
-.menu {
-    width: 300px;
-    height: 100%;
-    background-color: #222222;
-    box-shadow: ;
-    position: fixed;
-    right: 0px;
+.ctaButton{
+    margin-left: 10px;
+    color: #1a1a1a;
+    font-weight: bold;
 }
 
 .burgerMenu {
@@ -73,10 +64,35 @@ li, a, button, h1 {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    z-index: 1;
 }
 
 .line {
     width: 100%;
     height: 3px;
-    background-color: rgb(243, 229, 35);
+    background-color:#f2c740;
+}
+.row {
+    display: table;
+}
+.column {
+    float: left;
+    width: 50%;
+    height: 100%;
+    background-color: #eeeeee; 
+}
+.banner{
+    width: 100%;
+    height: 800px;
+    background-color: #ebebeb;
+}
+.tShirt {
+    position: relative;
+    width: 100%;
+    top: 100px;
+    right: 15%;
+}
+h1{
+    font-size: 50px;
+    color: #1a1a1a;
 }
