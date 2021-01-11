@@ -1,3 +1,4 @@
+/* General */
 *{
     margin: 0px;
     padding: 0px;
@@ -7,6 +8,25 @@ h1, h2, h3, p{
 }
 h1{
     font-size: 50px;
+}
+    h2{
+    font-size: 35px;
+}
+@media(max-width:550px){
+    h1{
+        font-size: 35px;
+    }
+    h2{
+        font-size: 25px;
+    }
+}
+@media (orientation:landscape){
+    h1{
+        font-size: 35px;
+    }
+    h2{
+        font-size: 25px;
+    }
 }
 button{
     width: 180px;
@@ -19,10 +39,15 @@ header{
     position: fixed;
     width: 100%;
 }
+/* End General */
 /* Header */
 .maincontainer{
     display: flex;
     flex-wrap: wrap;
+    box-sizing:border-box;
+}
+.column{
+    width: 50%;
     box-sizing:border-box;
 }
 .innercontainer{
@@ -65,12 +90,14 @@ p.textlogo{
     background-color: #f2c740;
     margin: 5px;
 }
-@media only screen and (max-width:550px){
+.ctaButton:hover{
+    background-color: #ffffff;
+    transition: all .2s
+}
+/* Mobile media query */
+@media (max-width:550px){
     .ctaHeader{
         display: none;
-    }
-    h1{
-        font-size: 30px;
     }
 }
 /* End Header */
@@ -79,9 +106,6 @@ p.textlogo{
     width: 100%;
     background-color: #eeeeee; 
     padding: 0px 15%;
-}
-.column{
-    width: 50%;
 }
 .tshirt{
     width: 900px;
@@ -93,15 +117,116 @@ p.textlogo{
 .banner h1{
     padding-top: 400px;
 }
+.divider{
+    width: 100px;
+    height: 8px;
+    background-color: #f2c740;
+    margin-top: 10px;
+}
+/* Mobile media query */
+@media (max-width:550px){
+    .tshirt{
+        width: 300px;
+    }
+    .banner .column{
+        width: 100%;
+    }
+    .banner h1{
+        padding-top: 200px;
+        text-align: center;
+    }
+    .banner{
+        padding-bottom: 100px;
+    }
+    .banner h2{
+        text-align: center;
+    }
+    .divider{
+        margin: auto;
+        margin-top: 10px;
+    }
+}
+/* @media (orientation:landscape){
+    .tshirt{
+        width: 400px;
+    }
+    .banner .column{
+        width: 100%;
+    }
+    .banner h1{
+        padding-top: 200px;
+        text-align: center;
+        font-size: 35px;
+    }
+    .banner h2{
+        text-align: center;
+    }
+    .divider{
+        margin: auto;
+        margin-top: 10px;
+    }
+    .banner{
+        padding-bottom: 100px;
+    }
+} */
 /* End banner */
+/* Section 1 */
 .section1{
     padding: 80px 15%;
+    justify-content: space-between;
 }
 .section1 .column{
-    width: 33.3%;
     background-color: #1a1a1a;
-    height: 200px;
+    width: 300px;
+    padding: 30px;
+    margin: 5px;
+    border-radius: 20px;
 }
-.section1 h2{
+.section1 h3{
+    color: #f2c740;
+}
+.section1 p{
     color: #ffffff;
+    padding-top: 15px;
 }
+.section1 button{
+    margin-top: 15px ;
+}
+.section1 button:hover{
+    background-color: #f2c740;
+    transition: all .2s;
+}
+/* End Section 1 */
+/* Section 2 */
+.section2{
+    padding: 0px 15%;
+}
+.section2-img{
+    height: 700px;
+    background-size: cover;
+    background-position: 0 50%;
+    background-image: url('http://localhost/camelDev/MyFirstSite/First-Website/images/miguel-bruna-z_ogAl0oWb4-unsplash.jpg') ;
+}
+.section2 .column2{
+    padding: 50px;
+}
+.section2 .column2 h3{
+    color: #f2c740;
+    padding-bottom: 10px;
+}
+.section2 p{
+    line-height: 2;
+}
+@media(max-width:550px){
+    .section2 .column{
+        width: 100%;
+    }
+    .section2-img{
+        background-position: 50% 50%;
+        height: 400px;
+    }
+    .section2 .column2{
+        padding: 20px;
+    }
+}
+/* End Section 2 */
