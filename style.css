@@ -1,126 +1,107 @@
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 }
-header{
-    background-color: #1a1a1a;
-    width: 100%;
-    height: 100px;
-    position: fixed; 
-    z-index: 1; 
-}
-.innerHeader{
-    display: flex;
-    justify-content: space-between;
-    height: 100%;
-    padding: 0px 20%;
-    align-items: center;
-}
-li, a, button, p, h1 {
+h1, h2, h3, p{
     font-family: 'montserrat';
-    text-decoration: none;
-    color: white;
-}
-
-.logoContainer .textLogo{
-    cursor: pointer;
-    color: #f2c740;
-    font-size: 40px;
-    font-weight: bold;
-}
-
-.logoContainer .textLogo span{
-    font-weight: 300;
-    color: white;
-}
-
-.navLinks li{
-    display: inline-block;
-    padding: 0 20px;
-}
-.navLinks a:hover{
-    color: #f2c740;
-}
-button {
-    width: 200px;
-    height: 40px;
-    background-color: #f2c740;
-    border: none;
-    border-radius: 50px;
-}
-.ctaButton{
-    margin-left: 10px;
-    color: #1a1a1a;
-    font-weight: bold;
-}
-
-.burgerMenu {
-    width: 35px;
-    height: 30px;
-    position: fixed;
-    top: 35px;
-    right: 30px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    z-index: 1;
-}
-
-.line {
-    width: 100%;
-    height: 3px;
-    background-color:#f2c740;
-}
-.row {
-    display: table;
-}
-.column {
-    float: left;
-    width: 50%;
-    height: 100%;
-    background-color: #eeeeee; 
-}
-.banner{
-    width: 100%;
-    height: 800px;
-}
-.tShirt {
-    position: relative;
-    width: 100%;
-    top: 100px;
-    right: 15%;
 }
 h1{
     font-size: 50px;
-    color: #1a1a1a;
-    position: relative;
-    top: 40%;
-    left: 30%;
-    font-weight: 400;
 }
-.highlight {
-    font-weight: bold;
-    color: #f2c740;
-    font-style: italic;
+button{
+    width: 180px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    font-size: 16px;
 }
-
-.container {
-    background-color: cornflowerblue;
-    height: 200px;
-    padding: 80px;
-    box-sizing: border-box;
+header{
+    position: fixed;
+    width: 100%;
 }
-.innercontainer {
-    background-color: crimson;
-    height: 100%;
-    max-width: 80%;
-    margin: auto;
+/* Header */
+.maincontainer{
     display: flex;
-    padding: 10px;
+    flex-wrap: wrap;
+    box-sizing:border-box;
 }
-.testcolumn {
-    background-color: rgb(233, 233, 233);
+.innercontainer{
+    display: flex;
+    background-color: #1a1a1a;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px 15%;
+    align-items: center;
+}
+.rightheader{
+    display: flex;
+    align-items: center;
+}
+.burgermenu{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.line{
+    width: 100%;
+    height: 3px;
+    background-color: yellow;
+}
+p.textlogo{
+    font-size: 40px;
+    color: #f2c740;
+    font-weight: 600;
+}
+.textlogo span{
+    font-weight: 200;
+    color: #ffffff;
+}
+.ctaHeader{
+    margin-right: 20px;
+}
+.ctaButton{
+    background-color: #f2c740;
+    margin: 5px;
+}
+@media only screen and (max-width:550px){
+    .ctaHeader{
+        display: none;
+    }
+    h1{
+        font-size: 30px;
+    }
+}
+/* End Header */
+/* Banner */
+.banner{
+    width: 100%;
+    background-color: #eeeeee; 
+    padding: 0px 15%;
+}
+.column{
     width: 50%;
-    padding: 25px;
+}
+.tshirt{
+    width: 900px;
+}
+.banner span{
+    font-style: italic;
+    color: #f2c740;
+}
+.banner h1{
+    padding-top: 400px;
+}
+/* End banner */
+.section1{
+    padding: 80px 15%;
+}
+.section1 .column{
+    width: 33.3%;
+    background-color: #1a1a1a;
+    height: 200px;
+}
+.section1 h2{
+    color: #ffffff;
 }
