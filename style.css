@@ -1,34 +1,25 @@
-/* General */
-*{
+body{
     margin: 0px;
     padding: 0px;
 }
-h1, h2, h3, p{
-    font-family: 'montserrat';
+.fw-maincontainer h1, h2, h3, h4, p{
+    font-family:'Helvetica';
 }
-h1{
+.fw-maincontainer h1{
     font-size: 50px;
 }
-    h2{
+.fw-maincontainer h2{
     font-size: 35px;
 }
-@media(max-width:550px){
-    h1{
+@media(max-width:750px){
+    .fw-maincontainer h1{
         font-size: 35px;
     }
-    h2{
+    .fw-maincontainer h2{
         font-size: 25px;
     }
 }
-@media (orientation:landscape){
-    h1{
-        font-size: 35px;
-    }
-    h2{
-        font-size: 25px;
-    }
-}
-button{
+.fw-maincontainer button{
     width: 180px;
     height: 50px;
     border-radius: 50px;
@@ -41,12 +32,12 @@ header{
 }
 /* End General */
 /* Header */
-.maincontainer{
+.fw-maincontainer{
     display: flex;
     flex-wrap: wrap;
     box-sizing:border-box;
 }
-.column{
+.fw-column{
     width: 50%;
     box-sizing:border-box;
 }
@@ -55,7 +46,7 @@ header{
     background-color: #1a1a1a;
     justify-content: space-between;
     width: 100%;
-    padding: 30px 15%;
+    padding: 0px 15%;
     align-items: center;
 }
 .rightheader{
@@ -95,7 +86,7 @@ p.textlogo{
     transition: all .2s
 }
 /* Mobile media query */
-@media (max-width:550px){
+@media (max-width:750px){
     .ctaHeader{
         display: none;
     }
@@ -115,7 +106,7 @@ p.textlogo{
     color: #f2c740;
 }
 .banner h1{
-    padding-top: 400px;
+    padding-top: 350px;
 }
 .divider{
     width: 100px;
@@ -124,11 +115,11 @@ p.textlogo{
     margin-top: 10px;
 }
 /* Mobile media query */
-@media (max-width:550px){
+@media (max-width:750px){
     .tshirt{
         width: 300px;
     }
-    .banner .column{
+    .banner .fw-column{
         width: 100%;
     }
     .banner h1{
@@ -146,36 +137,16 @@ p.textlogo{
         margin-top: 10px;
     }
 }
-/* @media (orientation:landscape){
-    .tshirt{
-        width: 400px;
-    }
-    .banner .column{
-        width: 100%;
-    }
-    .banner h1{
-        padding-top: 200px;
-        text-align: center;
-        font-size: 35px;
-    }
-    .banner h2{
-        text-align: center;
-    }
-    .divider{
-        margin: auto;
-        margin-top: 10px;
-    }
-    .banner{
-        padding-bottom: 100px;
-    }
-} */
 /* End banner */
 /* Section 1 */
 .section1{
-    padding: 80px 15%;
-    justify-content: space-between;
+    max-width: 1350px;
+    margin: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    justify-content: center;
 }
-.section1 .column{
+.section1 .fw-column{
     background-color: #1a1a1a;
     width: 300px;
     padding: 30px;
@@ -199,10 +170,13 @@ p.textlogo{
 /* End Section 1 */
 /* Section 2 */
 .section2{
-    padding: 0px 15%;
+    max-width: 1350px;
+    margin: auto;
+    padding-bottom: 60px;
+    justify-content: center;
 }
 .section2-img{
-    height: 700px;
+    /* height: 700px; */
     background-size: cover;
     background-position: 0 50%;
     background-image: url('http://localhost/camelDev/MyFirstSite/First-Website/images/miguel-bruna-z_ogAl0oWb4-unsplash.jpg') ;
@@ -212,21 +186,124 @@ p.textlogo{
 }
 .section2 .column2 h3{
     color: #f2c740;
-    padding-bottom: 10px;
+}
+.section2 .column2 h2{
+    margin: 0px;
 }
 .section2 p{
     line-height: 2;
 }
-@media(max-width:550px){
-    .section2 .column{
+.fw-accordion-container{
+    width: 100%;
+}
+.fw-accordion-item{
+    margin-bottom: 10px;
+    box-shadow: #a5a4a4 0px 7px 8px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+}
+.fw-accordion-link{
+    font-size: 20px;
+    font-family: 'Helvetica';
+    text-decoration:none;
+    padding: 18px;
+    color: #f2c740;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.fw-accordion-container h4{
+    padding-left: 18px;
+}
+.fw-accordion-answer{
+    background-color: #ffffff;
+    border-radius: 0px 0px 8px 8px;
+    padding: 0px 18px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all .2s;
+}
+.fw-accordion-link .fa-minus{
+    display: none;
+}
+.fw-accordion-item:target .fw-accordion-answer{
+    max-height: 20rem;
+}
+.fw-accordion-item:target .fw-accordion-link .fa-plus{
+    display: none;
+}
+.fw-accordion-item:target .fw-accordion-link .fa-minus{
+    display: block;
+}
+
+@media(max-width:750px){
+    .section2 .fw-column{
         width: 100%;
     }
     .section2-img{
         background-position: 50% 50%;
         height: 400px;
     }
-    .section2 .column2{
-        padding: 20px;
-    }
 }
 /* End Section 2 */
+/* Section 3 */
+.section3{
+    width: 100%;
+    margin: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    justify-content: center;
+    background-color: #eeeeee;
+}
+.section3 .fw-column{
+    width: 1350px;
+}
+.section3 h2{
+    text-align: center;
+}
+.fw-testimonial-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0px 200px;
+    box-sizing: border-box;
+}
+.fw-testimonial-item{
+    background-color: #ffffff;
+    width: 300px;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-bottom:#1a1a1a solid 7px;
+    padding-top: 20px;
+    padding-top: 20px;
+}
+.fw-testimonial-img{
+    border-radius: 50%;
+    border: #f2c740 solid 5px;
+    width: 150px;
+    display: block;
+    margin: auto;
+}
+.fw-tesimonial-name h3{
+    text-align: center;
+}
+.fw-testimonial-message p{
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.fw-testimonial-control{
+    display: flex;
+    justify-content: center;
+}
+.fw-testimonial-control-left{
+    font-size: 35px;
+    margin: 5px;
+}
+.fw-testimonial-control-right{
+    font-size: 35px;
+    margin: 5px;
+}
+
