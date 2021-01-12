@@ -302,8 +302,14 @@ p.textlogo{
     font-size: 35px;
     margin: 5px;
 }
+.fw-testimonial-control-left .fa-chevron-left{
+    color: #1a1a1a
+}
 .fw-testimonial-control-right{
     font-size: 35px;
     margin: 5px;
+}
+.fw-testimonial-control-right .fa-chevron-right{
+    color: #1a1a1a
 }
 
