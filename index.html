@@ -165,17 +165,42 @@
     </div>
     <div class="fw-maincontainer section4">
         <div class="fw-column">
-            <h3>Inquiry Form</h3>
-            <form class="fw-form-container">
-                <label for="fName">First Name</label><br>
-                <input type="text" id="fName" name="fName" value=""><br>
-                <label for="lName">Last Name</label><br>
-                <input type="text" id="lName" name="lName" value="">
-
+            <form id="fw-form-container">
+                <div class="fw-form-field">
+                    <label for="fw-first-name">First Name</label><br>
+                    <input type="text" id="fw-first-name"</input>
+                </div>
+                <div class="fw-form-field">
+                    <label for="fw-last-name">Last Name</label><br>
+                    <input type="text" id="fw-last-name"</input>
+                </div>
+                <div class="fw-form-field">
+                    <label for="fw-gender">Gender</label>
+                    <input type="radio" id="fw-male" name="fw-gender">
+                    <label for="fw-male">Male</label>
+                    <input type="radio" id="fw-female" name="fw-gender">
+                    <label for="fw-female">Female</label>
+                </div>
+                <div class="fw-form-field">
+                    <label>Select Product</label><br>
+                    <select>
+                        <option value="100">Bracelet = P100</option>
+                        <option value="200">Cap = P200</option>
+                        <option value="500">Watch = P500</option>
+                    </select>
+                </div>    
+                <div class="fw-form-field">
+                    <label for="fw-items">How many items?</label><br>
+                    <input type="number" id="fw-items"</input>
+                </div> 
+                <div class="fw-form-field">
+                    <label for="fw-total">Total:</label><br>
+                    <p id="fw-total"></p>
+                </div>
+                <div class="fw-form-field">
+                    <input type="submit" onclick="gatherData()" value="Submit" id="fw-form-submit">
+                </div>
             </form>
-        </div>
-        <div class="fw-column">
-            <h3>Collected data from the form</h3>
         </div>
     </div>
 </body>

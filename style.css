@@ -320,10 +320,3 @@ p.textlogo{
     padding-bottom: 60px;
     justify-content: center;
 }
-.fw-form-container{
-    background-color: #a5a4a4;
-    padding: 30px;
-}
-.fw-form-container input{
-    width: 50%;
-}
