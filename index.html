@@ -165,42 +165,48 @@
     </div>
     <div class="fw-maincontainer section4">
         <div class="fw-column">
-            <form id="fw-form-container">
+            <h3>Checkout Form</h3>
+            <form id="fw-form-container" onsubmit="return displayData(event)">
                 <div class="fw-form-field">
                     <label for="fw-first-name">First Name</label><br>
-                    <input type="text" id="fw-first-name"</input>
+                    <input type="text" id="fw-first-name" required></input>
                 </div>
                 <div class="fw-form-field">
                     <label for="fw-last-name">Last Name</label><br>
-                    <input type="text" id="fw-last-name"</input>
+                    <input type="text" id="fw-last-name" required></input>
                 </div>
-                <div class="fw-form-field">
-                    <label for="fw-gender">Gender</label>
-                    <input type="radio" id="fw-male" name="fw-gender">
-                    <label for="fw-male">Male</label>
+                <div class="fw-form-field-gender">
+                    <label for="fw-gender">Gender</label><br>
+                    <input type="radio" id="fw-male" name="fw-gender" required>
+                    <label for="fw-male">Male</label><br>
                     <input type="radio" id="fw-female" name="fw-gender">
                     <label for="fw-female">Female</label>
                 </div>
                 <div class="fw-form-field">
                     <label>Select Product</label><br>
-                    <select>
+                    <select id="fw-dropdown">
                         <option value="100">Bracelet = P100</option>
                         <option value="200">Cap = P200</option>
                         <option value="500">Watch = P500</option>
                     </select>
                 </div>    
                 <div class="fw-form-field">
-                    <label for="fw-items">How many items?</label><br>
-                    <input type="number" id="fw-items"</input>
+                    <label for="fw-countItems">How many items?</label><br>
+                    <input type="number" id="fw-countItems" value=""required></input>
                 </div> 
                 <div class="fw-form-field">
-                    <label for="fw-total">Total:</label><br>
-                    <p id="fw-total"></p>
-                </div>
-                <div class="fw-form-field">
-                    <input type="submit" onclick="gatherData()" value="Submit" id="fw-form-submit">
+                    <input type="submit" value="Proceed" id="fw-form-submit">
                 </div>
             </form>
+        </div>
+        <div class="fw-column">
+            <h3>Display Data</h3>
+            <div class="form-data">
+                <p id="data-fullname"></p>
+                <p id="gender-selected"></p>
+                <p id="product-selected"></p>
+                <p id="product-total"></p>
+            </div>
         </div>
     </div>
 </body>

@@ -320,3 +320,43 @@ p.textlogo{
     padding-bottom: 60px;
     justify-content: center;
 }
+#fw-form-container{
+    background-color: #1a1a1a;
+    padding: 20px;
+}
+.fw-form-field{
+    color: #ffffff;
+    font-family: 'Helvetica';
+    margin-bottom: 10px;
+}
+.fw-form-field input{
+    height: 25px;
+    width: 50%;
+}
+.fw-form-field select{
+    height: 35px;
+    width: 51%;
+}
+.form-row1 {
+    display: flex;
+}
+#fw-form-submit{
+    width: 180px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    font-size: 16px;
+    background-color: #f2c740;
+}
+.fw-form-field-gender{
+    color: #ffffff;
+    font-family: 'Helvetica';
+    margin-bottom: 10px;
+}
+.form-data{
+    padding: 25px;
+}
+#product-total{
+    font-weight: bold;
+}
+
