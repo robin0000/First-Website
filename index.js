@@ -5,14 +5,24 @@ function displayData(e) {
     let lname = document.getElementById("fw-last-name").value
     let fullname = document.getElementById("data-fullname");
     fullname.innerHTML = "Name: " + fname + " " + lname;
+    // Email
+    let email = document.getElementById("fw-email").value;
+    let displayEmail = document.getElementById("data-email");
+    displayEmail.innerHTML = "Email: " + email;
+    // Address
+    let address = document.getElementById("fw-address").value;
+    let dataAddress = document.getElementById("data-address");
+    dataAddress.innerHTML = "Address: " + address;
     // Gender
-    let male = document.getElementById("fw-male");
-    let female = document.getElementById("fw-female");
-    let gender = document.getElementById("gender-selected");
-    if(male.checked == true){
-        gender.innerHTML = "Gender: Male";
-    }else{
-        gender.innerHTML = "Gender: Female";
+    let red = document.getElementById("fw-red");
+    let blue = document.getElementById("fw-blue");
+    let color = document.getElementById("color-selected");
+    if(red.checked == true){
+        color.innerHTML = "Color: Red";
+    }else if(blue.checked == true){
+        color.innerHTML = "Color: Blue";
+    }else {
+        color.innerHTML = "Color: Black";
     };
     // Dropdown product selection
     let productSelection = document.getElementById("fw-dropdown").value;
@@ -29,5 +39,4 @@ function displayData(e) {
         let watch = document.getElementById("product-selected");
         watch.innerHTML = "Product: Watch " + numberItem + " pcs. (P500 each)";
     }
-    
   };

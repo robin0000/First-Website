@@ -313,6 +313,7 @@ p.textlogo{
     color: #1a1a1a
 }
 /* End section 3 */
+/* Section 4 */
 .section4{
     max-width: 1350px;
     margin: auto;
@@ -320,43 +321,49 @@ p.textlogo{
     padding-bottom: 60px;
     justify-content: center;
 }
-#fw-form-container{
-    background-color: #1a1a1a;
-    padding: 20px;
-}
 .fw-form-field{
-    color: #ffffff;
-    font-family: 'Helvetica';
-    margin-bottom: 10px;
+    font-family:'helvetica';
 }
-.fw-form-field input{
-    height: 25px;
-    width: 50%;
+.fw-form-field input::placeholder{
+    font-size: 16px;
+    padding-left: 3px;
 }
 .fw-form-field select{
-    height: 35px;
-    width: 51%;
+    font-size: 16px;
 }
-.form-row1 {
+#fw-form-container{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: auto;
+    background-color: #eeeeee;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 10px;
+    border-bottom: solid 6px #f2c740;
+    width: 500px;
+}
+.fw-input-50{
+    height: 30px;
+    width: 48%;
+    margin: 3px 0px;
+    border: none;
+}
+.fw-input-100{
+    height: 30px;
+    width: 98%;
+    margin: 3px 0px;
+    border: none;
+}
+#fw-address{
+    margin-bottom: 10px;
 }
 #fw-form-submit{
     width: 180px;
     height: 50px;
+    margin-top: 10px;
     border-radius: 50px;
     border: none;
     font-size: 16px;
-    background-color: #f2c740;
+    background-color: #f2c740
 }
-.fw-form-field-gender{
-    color: #ffffff;
-    font-family: 'Helvetica';
-    margin-bottom: 10px;
-}
-.form-data{
-    padding: 25px;
-}
-#product-total{
-    font-weight: bold;
-}
-

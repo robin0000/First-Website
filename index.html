@@ -168,33 +168,26 @@
             <h3>Checkout Form</h3>
             <form id="fw-form-container" onsubmit="return displayData(event)">
                 <div class="fw-form-field">
-                    <label for="fw-first-name">First Name</label><br>
-                    <input type="text" id="fw-first-name" required></input>
-                </div>
-                <div class="fw-form-field">
-                    <label for="fw-last-name">Last Name</label><br>
-                    <input type="text" id="fw-last-name" required></input>
-                </div>
-                <div class="fw-form-field-gender">
-                    <label for="fw-gender">Gender</label><br>
-                    <input type="radio" id="fw-male" name="fw-gender" required>
-                    <label for="fw-male">Male</label><br>
-                    <input type="radio" id="fw-female" name="fw-gender">
-                    <label for="fw-female">Female</label>
-                </div>
-                <div class="fw-form-field">
-                    <label>Select Product</label><br>
-                    <select id="fw-dropdown">
+                    <input type="text" id="fw-first-name" class="fw-input-50" placeholder="First name" required></input>
+                    <input type="text" id="fw-last-name" class="fw-input-50" placeholder="Last name" required></input>
+                    <input type="email" id="fw-email" class="fw-input-50" placeholder="Email" required></input>
+                    <input type="text" id="fw-address" class="fw-input-50" placeholder="Address" required></input><br>
+                    <label>Select product</label><br>
+                    <select id="fw-dropdown" class="fw-input-100">
                         <option value="100">Bracelet = P100</option>
                         <option value="200">Cap = P200</option>
                         <option value="500">Watch = P500</option>
                     </select>
-                </div>    
-                <div class="fw-form-field">
                     <label for="fw-countItems">How many items?</label><br>
-                    <input type="number" id="fw-countItems" value=""required></input>
-                </div> 
-                <div class="fw-form-field">
+                    <input type="number" id="fw-countItems" class="fw-input-50" value=""required></input>
+                    <input type="radio" id="fw-red" name="fw-color" required>
+                    <label for="fw-red">Red</label>
+                    <input type="radio" id="fw-blue" name="fw-color">
+                    <label for="fw-blue">Blue</label>
+                    <input type="radio" id="fw-black" name="fw-color">
+                    <label for="fw-black">Black</label><br>
+                    <input type="checkbox" id="fw-terms" name="fw-terms" required></input>
+                    <label for="fw-terms">I agree to the Terms & Conditions</label><br>
                     <input type="submit" value="Proceed" id="fw-form-submit">
                 </div>
             </form>
@@ -203,8 +196,11 @@
             <h3>Display Data</h3>
             <div class="form-data">
                 <p id="data-fullname"></p>
-                <p id="gender-selected"></p>
+                <p id="data-email"></p>
+                <p id="data-address"></p>
+                <p id="terms-condition"></p>
                 <p id="product-selected"></p>
+                <p id="color-selected"></p>
                 <p id="product-total"></p>
             </div>
         </div>
