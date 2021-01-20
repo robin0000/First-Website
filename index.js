@@ -1,3 +1,16 @@
+// Calculator
+function output(button){
+    let buttonValue = button.value;
+    let currentValue = document.querySelector('#current-value');
+    currentValue.innerHTML = currentValue.innerHTML + buttonValue;
+
+    if (buttonValue == "AC"){
+        currentValue.innerHTML = "";
+    }else if(buttonValue == "C"){
+        currentValue.innerHTML = "";
+    }
+};
+// checkout form
 function displayData(e) {
     e.preventDefault();
     // Full name
