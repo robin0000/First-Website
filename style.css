@@ -431,6 +431,7 @@ p.textlogo{
 }
 .cal-previous-operand p {
     color: #a5a4a4;
+    font-size: 16px;
     text-align: right;
 }
 .cal-current-operand p{

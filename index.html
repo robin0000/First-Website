@@ -217,24 +217,24 @@
                     </div>
                 </div>
                 <div class="cal-keyboard">
-                    <button class="operator" id="all-clear" value="AC" onclick="output(this)">AC</button>
-                    <button class="operator" id="clear" value="C" onclick="output(this)">C</button>
-                    <button class="operator" id="divide" value="÷">÷</button>
+                    <button class="operator" id="all-clear" value="AC" onclick="allClear()">AC</button>
+                    <button class="operator" id="clear" value="C" onclick="inputClear()">C</button>
+                    <button class="operator" id="divide" value="÷" onclick="operator(this)">÷</button>
                     <button class="number" id="seven" value="7" onclick="output(this)">7</button>
                     <button class="number" id="eight" value="8" onclick="output(this)">8</button>
                     <button class="number" id="nine" value="9" onclick="output(this)">9</button>
-                    <button class="number" class="operator" id="multiply" value="x">x</button>
+                    <button class="operator" id="multiply" value="x" onclick="operator(this)">x</button>
                     <button class="number" id="four" value="4" onclick="output(this)">4</button>
                     <button class="number" id="five" value="5" onclick="output(this)">5</button>
                     <button class="number" id="six" value="6" onclick="output(this)">6</button>
-                    <button class="operator" id="substract" value="-">-</button>
+                    <button class="operator" id="substract" value="-" onclick="operator(this)">-</button>
                     <button class="number" id="one" value="1" onclick="output(this)">1</button>
                     <button class="number" id="two" value="2" onclick="output(this)">2</button>
                     <button class="number" id="three" value="3" onclick="output(this)">3</button>
-                    <button class="operator" id="add" value="+">+</button>
+                    <button class="operator" id="add" value="+" onclick="operator(this)">+</button>
                     <button class="number" id="dot" value="." onclick="output(this)">.</button>
                     <button class="number" id="zero" value="0" onclick="output(this)">0</button>
-                    <button class="operator" id="equals" value="=">=</button>
+                    <button class="operator" id="equals" value="=" onclick="equal()">=</button>
                 </div>
                 
             </div>

@@ -1,15 +1,29 @@
 // Calculator
-function output(button){
-    let buttonValue = button.value;
-    let currentValue = document.querySelector('#current-value');
-    currentValue.innerHTML = currentValue.innerHTML + buttonValue;
+let previousValue;
+let currentValue;
+let inputValue;
+function output(button) {
+    inputValue = button.value;
+    currentValue = document.querySelector('#current-value');
+    currentValue.innerHTML += inputValue;     
+}
+function operator(operand) {
+    inputValue = operand.value;
+    previousValue = document.querySelector('#previous-value');
+    previousValue.innerHTML = currentValue.innerHTML + inputValue;
+    currentValue.innerHTML = "";
+}
+function allClear() {
+    currentValue = document.querySelector('#current-value');
+    currentValue.innerHTML = "";
+    previousValue = document.querySelector('#previous-value');
+    previousValue.innerHTML = "";
+}
+function inputClear() {
+    currentValue = document.querySelector('#current-value');
+    currentValue.innerHTML = currentValue.innerHTML.substr(0,currentValue.innerHTML.length-1);
+}
 
-    if (buttonValue == "AC"){
-        currentValue.innerHTML = "";
-    }else if(buttonValue == "C"){
-        currentValue.innerHTML = "";
-    }
-};
 // checkout form
 function displayData(e) {
     e.preventDefault();
@@ -52,4 +66,4 @@ function displayData(e) {
         let watch = document.getElementById("product-selected");
         watch.innerHTML = "Product: Watch " + numberItem + " pcs. (P500 each)";
     }
-  };
+  }
