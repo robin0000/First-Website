@@ -1,3 +1,47 @@
+let pageCounter = 1;
+let infoContainer = document.getElementById('info');
+let button = document.getElementById('btn');
+button.addEventListener('click', function() {
+    let ourRequest = new XMLHttpRequest();
+    ourRequest.open('GET','https://learnwebcode.github.io/json-example/animals-'+ pageCounter +'.json');
+    ourRequest.onload = function() {
+        let ourData = JSON.parse(ourRequest.responseText);
+        renderHTML(ourData);
+    };  
+    ourRequest.send();
+    pageCounter ++;
+    if(pageCounter > 3){
+        button.classList.add("hide-me");
+    }
+});
+
+function renderHTML(data) {
+    let htmlString = "";
+    for(let i = 0; i < data.length; i++){
+        htmlString += "<p>" + data[i].name + " is a " + data[i].species + " that likes to eat ";
+        for(ii = 0; ii < data[i].foods.likes.length; ii++){
+            if(ii == 0){
+               htmlString += data[i].foods.likes[ii];
+            } else {
+                htmlString += ' and ' +  data[i].foods.likes[ii];
+            }
+        }
+        htmlString += ' and dislikes ';
+        for(ii = 0; ii < data[i].foods.dislikes.length; ii++){
+            if(ii == 0){
+               htmlString += data[i].foods.dislikes[ii];
+            } else {
+                htmlString += ' and ' +  data[i].foods.dislikes[ii];
+            }
+        }
+
+        htmlString += '.</p>'
+    }
+
+    infoContainer.insertAdjacentHTML('beforeend',htmlString);
+};
+
+
 // Calculator
 let previousValue;
 let currentValue;
@@ -5,7 +49,7 @@ let inputValue;
 function output(button) {
     inputValue = button.value;
     currentValue = document.querySelector('#current-value');
-    currentValue.innerHTML += inputValue;     
+    currentValue.innerHTML += inputValue;    
 }
 function operator(operand) {
     inputValue = operand.value;
