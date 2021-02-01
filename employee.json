@@ -1,0 +1,17 @@
+[
+  {
+    "name": "John Doe",
+    "gender" : "Male",
+    "department": "Technical Development"
+  },
+  {
+    "name": "Alyssa Brooke",
+    "gender" : "Female",
+    "department": "Customer Support"
+  },
+  {
+    "name": "Adriane Smith",
+    "gender" : "Female",
+    "department": "Quality Assurance"
+  }
+]

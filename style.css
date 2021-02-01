@@ -443,3 +443,18 @@ p.textlogo{
 .hide-me{
     visibility: hidden;
 }
+/* section 6  filter*/
+.section6{
+    max-width: 1350px;
+    margin: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    justify-content: center;
+}
+.section6  h2 {
+    text-align: center;
+}
+#fw-filter{
+    font-size: 20px;
+    padding: 5px;
+}

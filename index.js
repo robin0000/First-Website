@@ -1,3 +1,20 @@
+let employeeDataContainer = document.getElementById('employeeData');
+let dataRequest = new XMLHttpRequest();
+dataRequest.open('GET','employee.json');
+dataRequest.onload = function () {
+    let employeeData = JSON.parse(dataRequest.responseText);
+    renderEmployeeData(employeeData);
+}
+dataRequest.send();
+
+function renderEmployeeData(data){
+    let employeeContent = "";
+    employeeContent += "<p>" + data[2].name + "</p>";
+    employeeDataContainer.insertAdjacentHTML('beforeend',employeeContent);
+
+}
+
+// //fetch cat data
 let pageCounter = 1;
 let infoContainer = document.getElementById('info');
 let button = document.getElementById('btn');
