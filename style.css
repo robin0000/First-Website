@@ -219,22 +219,8 @@ p.textlogo{
     background-color: #ffffff;
     border-radius: 0px 0px 8px 8px;
     padding: 0px 18px;
-    max-height: 0px;
-    overflow: hidden;
-    transition: all .2s;
 }
-.fw-accordion-link .fa-minus{
-    display: none;
-}
-.fw-accordion-item:target .fw-accordion-answer{
-    max-height: 20rem;
-}
-.fw-accordion-item:target .fw-accordion-link .fa-plus{
-    display: none;
-}
-.fw-accordion-item:target .fw-accordion-link .fa-minus{
-    display: block;
-}
+
 
 @media(max-width:750px){
     .section2 .fw-column{
