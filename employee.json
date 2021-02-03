@@ -1,17 +1,19 @@
-[
-  {
-    "name": "John Doe",
-    "gender" : "Male",
-    "department": "Technical Development"
-  },
-  {
-    "name": "Alyssa Brooke",
-    "gender" : "Female",
-    "department": "Customer Support"
-  },
-  {
-    "name": "Adriane Smith",
-    "gender" : "Female",
-    "department": "Quality Assurance"
-  }
-]
+{
+  "person": [
+    {
+      "name": "Amanda Smith",
+      "gender" : "Female",
+      "department": "Designer"
+    },
+    {
+      "name": "John Doe",
+      "gender" : "Male",
+      "department": "Designer"
+    },
+    {
+      "name": "Alyssa Brooke",
+      "gender" : "Female",
+      "department": "Developer"
+    }
+  ]
+}

@@ -1,9 +1,4 @@
-// Accordion
-$(document).ready(function(){
-    $(".fw-accordion-link").click(function(){
-        $(".fw-accordion-answer").slideToggle(500);
-    });
-});
+
 
 //fetch cat data
 let pageCounter = 1;
@@ -22,6 +17,7 @@ button.addEventListener('click', function() {
         button.classList.add("hide-me");
     }
 });
+
 
 function renderHTML(data) {
     let htmlString = "";
