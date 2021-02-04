@@ -1,50 +1,79 @@
+//Get employee data
+let employeeContainer = $(".employeeContainer");
+let employeeData = [];
 
+function getData(){
+    $.ajax({
+        url: "employee.json",
+        type: "GET"
+    }).done(function(data){
+        employeeData = data;
+        createHTML(data);
+    });
+}
 
-//fetch cat data
-let pageCounter = 1;
-let infoContainer = document.getElementById('info');
-let button = document.getElementById('btn');
-button.addEventListener('click', function() {
-    let ourRequest = new XMLHttpRequest();
-    ourRequest.open('GET','https://learnwebcode.github.io/json-example/animals-'+ pageCounter +'.json');
-    ourRequest.onload = function() {
-        let ourData = JSON.parse(ourRequest.responseText);
-        renderHTML(ourData);
-    };  
-    ourRequest.send();
-    pageCounter ++;
-    if(pageCounter > 3){
-        button.classList.add("hide-me");
-    }
+function createHTML(employeeData){
+    let template = $("#employeeTemplate").html();
+    let compiledTemplate = Handlebars.compile(template);
+    let generateHTML = compiledTemplate(employeeData);
+
+    $(".employeeItems").html(generateHTML);
+}
+
+$("#showAll").click(function(){
+    getData();
+})
+
+// $("#showAll").click(function(){
+//     employeeContainer.empty();
+//     employeeData.map(function(key){
+//         employeeContainer.append(`<div class="employeeItems">
+//                 <div class="employeeImg"><img src="${key.image}"></img></div>
+//                 <h3>${key.name}</h3>
+//                 <p>Age: ${key.age}</p>
+//                 <p><b>${key.department}<b></p>
+//             </div>`);
+//     })
+// });
+$("#designer").click(function(){
+    employeeContainer.empty();
+    employeeData.map(function(key){
+        if(key.department == "Web Designer"){
+            employeeContainer.append(`<div class="employeeItems">
+                <div class="employeeImg"><img src="${key.image}"></img></div>
+                <h3>${key.name}</h3>
+                <p>Age: ${key.age}</p>
+                <p><b>${key.department}<b></p>
+            </div>`);
+        }
+    })
 });
-
-
-function renderHTML(data) {
-    let htmlString = "";
-    for(let i = 0; i < data.length; i++){
-        htmlString += "<p>" + data[i].name + " is a " + data[i].species + " that likes to eat ";
-        for(ii = 0; ii < data[i].foods.likes.length; ii++){
-            if(ii == 0){
-               htmlString += data[i].foods.likes[ii];
-            } else {
-                htmlString += ' and ' +  data[i].foods.likes[ii];
-            }
+$("#developer").click(function(){
+    employeeContainer.empty();
+    employeeData.map(function(key){
+        if(key.department == "Web Developer"){
+            employeeContainer.append(`<div class="employeeItems">
+                <div class="employeeImg"><img src="${key.image}"></img></div>
+                <h3>${key.name}</h3>
+                <p>Age: ${key.age}</p>
+                <p><b>${key.department}<b></p>
+            </div>`);
         }
-        htmlString += ' and dislikes ';
-        for(ii = 0; ii < data[i].foods.dislikes.length; ii++){
-            if(ii == 0){
-               htmlString += data[i].foods.dislikes[ii];
-            } else {
-                htmlString += ' and ' +  data[i].foods.dislikes[ii];
-            }
+    })
+});
+$("#support").click(function(){
+    employeeContainer.empty();
+    employeeData.map(function(key){
+        if(key.department == "Customer Support"){
+            employeeContainer.append(`<div class="employeeItems">
+                <div class="employeeImg"><img src="${key.image}"></img></div>
+                <h3>${key.name}</h3>
+                <p>Age: ${key.age}</p>
+                <p><b>${key.department}<b></p>
+            </div>`);
         }
-
-        htmlString += '.</p>'
-    }
-
-    infoContainer.insertAdjacentHTML('beforeend',htmlString);
-};
-
+    })
+});
 
 // Calculator
 let previousValue;

@@ -1,19 +1,32 @@
-{
-  "person": [
+[
     {
       "name": "Amanda Smith",
-      "gender" : "Female",
-      "department": "Designer"
+      "age" : "23",
+      "department": "Web Designer",
+      "image": "images/person1.jpg"
     },
     {
       "name": "John Doe",
-      "gender" : "Male",
-      "department": "Designer"
+      "age" : "25",
+      "department": "Web Developer",
+      "image": "images/person2.jpg"
     },
     {
       "name": "Alyssa Brooke",
-      "gender" : "Female",
-      "department": "Developer"
+      "age" : "24",
+      "department": "Web Developer",
+      "image": "images/person3.jpg"
+    },
+    {
+      "name": "Steven brown",
+      "age" : "27",
+      "department": "Customer Support",
+      "image": "images/person4.jpg"
+    },
+    {
+      "name": "Elizabeth Bailey",
+      "age" : "26",
+      "department": "Customer Support",
+      "image": "images/person5.jpg"
     }
   ]
-}

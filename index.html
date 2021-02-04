@@ -209,21 +209,28 @@
                 
             </div>
         </div> -->
-        <div class="fw-column">
-            <h1>JSON and AJAX</h1>
-            <button id="btn">Fetch Data</button>
-            <div id="info"></div>
-        </div>
     </div>
     <div class="fw-maincontainer section6">
         <div class="fw-column">
-            <button id="showAll">Show All</button>
-            <button id="designer">Designer</button>
-            <button id="developer">Developer</button>
-            <div id="employeeContainer"></div>
+            <div class="buttonContainer">
+                <button id="showAll">Show All</button>
+                <button id="designer">Designer</button>
+                <button id="developer">Developer</button>
+                <button id="support">Support</button>
+            </div>
+            <div class="employeeContainer">
+                <div class="employeeItems"></div>
+            </div>
+
         </div>
     </div>
-    <script type="text/x-handlebars-template">
+    <script id="employeeTemplate" type="text/x-handlebars-template">
+        {{#each this}}
+                <div class="employeeImg"><img src="{{image}}"></div>
+                <h3>{{name}}</h3>
+                <p>Age: {{age}}</p>
+                <p>{{department}}</p>
+        {{/each}}
     </script>
     <script src="handlebars-v4.7.6.js"></script>
     <script src="index.js"></script>

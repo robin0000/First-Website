@@ -438,4 +438,31 @@ p.textlogo{
     padding-bottom: 60px;
     justify-content: center;
 }
-
+.section6 .fw-column{
+    width: 100%;
+}
+.buttonContainer{
+    display: flex;
+    justify-content: center;
+}
+.buttonContainer button{
+      margin: 0px 5px;
+      cursor: pointer;
+}
+.employeeContainer{
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.employeeItems{
+    box-shadow: #c0bfbf 2px 0px 5px;
+    width: auto;
+    padding: 10px;
+    margin: 10px 10px;
+    text-align: center;
+}
+.employeeImg img{
+    width: 200px;
+    height: 200px;
+}
