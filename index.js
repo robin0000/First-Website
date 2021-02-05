@@ -17,7 +17,7 @@ function createHTML(employeeData){
     let compiledTemplate = Handlebars.compile(template);
     let generateHTML = compiledTemplate(employeeData);
 
-    $(".employeeItems").html(generateHTML);
+    $(".employeeContainer").html(generateHTML);
 }
 
 $("#showAll").click(function(){

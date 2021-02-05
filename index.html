@@ -219,17 +219,19 @@
                 <button id="support">Support</button>
             </div>
             <div class="employeeContainer">
-                <div class="employeeItems"></div>
+                
             </div>
 
         </div>
     </div>
     <script id="employeeTemplate" type="text/x-handlebars-template">
         {{#each this}}
+        <div class="employeeItems">
                 <div class="employeeImg"><img src="{{image}}"></div>
                 <h3>{{name}}</h3>
                 <p>Age: {{age}}</p>
                 <p>{{department}}</p>
+            </div>
         {{/each}}
     </script>
     <script src="handlebars-v4.7.6.js"></script>
